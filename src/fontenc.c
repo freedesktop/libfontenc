@@ -21,7 +21,7 @@ THE SOFTWARE.
 */
 
 /* $XdotOrg: xc/lib/font/fontfile/fontenc.c,v 1.16 2003/12/19 02:05:38 dawes Exp $ */
-/* $XFree86: xc/lib/font/fontfile/fontenc.c,v 1.16 2003/12/19 02:05:38 dawes Exp $ */
+/* $XFree86: xc/lib/font/fontfile/fontenc.c,v 1.15 2003/02/20 03:25:19 dawes Exp $ */
 
 /* Backend-independent encoding code */
 
