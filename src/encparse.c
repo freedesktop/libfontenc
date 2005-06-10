@@ -32,7 +32,7 @@ THE SOFTWARE.
 #include <string.h>
 #include <stdio.h>
 
-#ifdef SCO325
+#ifdef __SCO__
 #include <strings.h>
 #endif
 
