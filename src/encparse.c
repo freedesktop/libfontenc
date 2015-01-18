@@ -833,8 +833,8 @@ FontEncReallyReallyLoad(const char *charset,
 
     encoding = NULL;
     if (!format[0]) {
-	sprintf(format, "%%%ds %%%d[^\n]\n", (int)sizeof(encoding_name) - 1,
-		(int)sizeof(file_name) - 1);
+	snprintf(format, sizeof(format), "%%%ds %%%d[^\n]\n",
+                 (int)sizeof(encoding_name) - 1, (int)sizeof(file_name) - 1);
     }
     for(;;) {
         count = fscanf(file, format, encoding_name, file_name);
