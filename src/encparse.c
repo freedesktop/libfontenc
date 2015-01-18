@@ -505,7 +505,7 @@ parseEncodingFile(FontFilePtr f, int headerOnly)
     FontMapPtr mapping = NULL;
     FontEncSimpleMapPtr sm;
     FontEncSimpleNamePtr sn;
-    char *aliases[MAXALIASES];
+    char *aliases[MAXALIASES] = { NULL };
     int numaliases = 0;
 
 #if 0
