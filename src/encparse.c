@@ -801,8 +801,7 @@ parseFontFileName(const char *fontFileName, char *buf, char *dir)
     *lastslash = '\0';
 
     if(buf && strlen(dir) + 14 < MAXFONTFILENAMELEN) {
-        strcpy(buf, dir);
-        strcat(buf, "encodings.dir");
+        snprintf(buf, MAXFONTFILENAMELEN, "%s%s", dir, "encodings.dir");
     }
 }
 
@@ -850,10 +849,9 @@ FontEncReallyReallyLoad(const char *charset,
 		    fclose(file);
                     return NULL;
 		}
-                strcpy(buf, dir);
-                strcat(buf, file_name);
+                snprintf(buf, MAXFONTFILENAMELEN, "%s%s", dir, file_name);
             } else {
-                strcpy(buf , file_name);
+                snprintf(buf, MAXFONTFILENAMELEN, "%s", file_name);
             }
 
             f = FontFileOpen(buf);
